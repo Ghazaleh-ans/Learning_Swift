@@ -20,10 +20,10 @@
                                 <rect key="frame" x="0.0" y="124" width="402" height="682"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1GX-8O-nJf" userLabel="Row0">
-                                        <rect key="frame" x="0.0" y="0.0" width="402" height="113"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="113"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 0  " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gC2-i9-XzD">
-                                                <rect key="frame" x="0.0" y="0.0" width="402" height="113"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="113"/>
                                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="20"/>
                                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="50"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -227,11 +227,10 @@
                                     <constraint firstItem="1GX-8O-nJf" firstAttribute="top" secondItem="qLc-Rz-JnX" secondAttribute="top" id="GKi-7l-VWX"/>
                                     <constraint firstItem="eNQ-3U-4Yl" firstAttribute="leading" secondItem="qLc-Rz-JnX" secondAttribute="leading" id="Hbl-LV-SwA"/>
                                     <constraint firstItem="69N-79-JV4" firstAttribute="leading" secondItem="qLc-Rz-JnX" secondAttribute="leading" id="QR4-1w-Yog"/>
-                                    <constraint firstAttribute="trailing" secondItem="1GX-8O-nJf" secondAttribute="trailing" id="V26-mg-bYX"/>
                                     <constraint firstAttribute="bottom" secondItem="69N-79-JV4" secondAttribute="bottom" id="VN3-yp-VdT"/>
                                     <constraint firstItem="fKT-S3-MgV" firstAttribute="leading" secondItem="qLc-Rz-JnX" secondAttribute="leading" id="WSh-kj-S2G"/>
                                     <constraint firstAttribute="trailing" secondItem="bdY-A8-c1f" secondAttribute="trailing" id="egi-O0-uZJ"/>
-                                    <constraint firstItem="1GX-8O-nJf" firstAttribute="leading" secondItem="qLc-Rz-JnX" secondAttribute="leading" id="nM1-nI-T1x"/>
+                                    <constraint firstAttribute="trailing" secondItem="1GX-8O-nJf" secondAttribute="trailing" constant="20" id="hDv-uz-ypO"/>
                                     <constraint firstAttribute="trailing" secondItem="fKT-S3-MgV" secondAttribute="trailing" id="sfb-8c-Nzl"/>
                                     <constraint firstItem="bdY-A8-c1f" firstAttribute="leading" secondItem="qLc-Rz-JnX" secondAttribute="leading" id="uYF-BH-iW8"/>
                                 </constraints>
