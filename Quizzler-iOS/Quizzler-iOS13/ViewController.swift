@@ -8,6 +8,17 @@
 
 import UIKit
 
+extension UIButton {
+  func shortChangeTo(_ color:UIColor) {
+    let prev = self.backgroundColor
+    self.backgroundColor = color
+    DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+       self.backgroundColor = prev
+    }
+  }
+}
+
+
 class ViewController: UIViewController {
     
     @IBOutlet weak var questionLabel: UILabel!
@@ -15,6 +26,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var trueButton: UIButton!
     @IBOutlet weak var falseButton: UIButton!
     
+    var timer: Timer? = nil
     let quiz = [   Question(q: "A slug's blood is green.", a: "True"),
                    Question(q: "Approximately one quarter of human bones are in the feet.", a: "True"),
                    Question(q: "The total surface area of two human lungs is approximately 70 square metres.", a: "True"),
@@ -35,11 +47,11 @@ class ViewController: UIViewController {
         
         let userAnswer = sender.currentTitle! //True or false
         let correctAnswer = quiz[questionNumber].answer
-        
+
         if userAnswer == correctAnswer {
-            print("Correct!")
+            sender.shortChangeTo(.green)
         } else {
-            print("Wrong!")
+            sender.shortChangeTo(.red)
         }
         if questionNumber == quiz.count - 1 {
             questionNumber = 0
@@ -55,9 +67,12 @@ class ViewController: UIViewController {
         updateUI()
     }
     
-    func updateUI(){
+    @objc func updateUI(){
         questionLabel.text = quiz[questionNumber].text
+//        trueButton.backgroundColor = UIColor.clear
+//        falseButton.backgroundColor = UIColor.clear
     }
+    
 
 }
 
