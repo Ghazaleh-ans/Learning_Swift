@@ -15,14 +15,18 @@ class ViewController: UIViewController {
     @IBOutlet weak var trueButton: UIButton!
     @IBOutlet weak var falseButton: UIButton!
     
-    let quiz = [["Four + Two is equal to Six.", "True"], ["Bananas are green.", "False"], ["The capital of France is Paris.", "True"], ["Water boils at 100°C.", "True"]]
+    let quiz = [ Question(text: "Four + Two is equal to Six.", answer: "True"),
+                 Question(text: "Bananas are green.", answer: "False"),
+                 Question(text: "The capital of France is Paris.", answer: "True"),
+                 Question(text: "Water boils at 100°C.", answer: "True")
+    ]
     
     var questionNumber: Int = 0
     
     @IBAction func answerButtonPressed(_ sender: UIButton) {
         
         let userAnswer = sender.currentTitle! //True or false
-        let correctAnswer = quiz[questionNumber][1]
+        let correctAnswer = quiz[questionNumber].answer
         
         if userAnswer == correctAnswer {
             print("Correct!")
@@ -44,7 +48,7 @@ class ViewController: UIViewController {
     }
     
     func updateUI(){
-        questionLabel.text = quiz[questionNumber][0]
+        questionLabel.text = quiz[questionNumber].text
     }
 
 }
