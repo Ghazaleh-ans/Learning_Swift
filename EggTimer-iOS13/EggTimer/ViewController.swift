@@ -12,15 +12,17 @@ class ViewController: UIViewController {
     let eggTimes = ["Soft": 5, "Medium":7, "Hard": 12]
     
     @IBAction func hardnessSelected(_ sender: UIButton) {
-        let hardness = sender.currentTitle
-        if hardness == "Soft" {
-            print(eggTimes["Soft"]!)
-        }
-        else if hardness == "Medium" {
-            print(eggTimes["Medium"]!)
-        }
-        else{
-            print(eggTimes["Hard"]!)
-        }
+        let hardness = sender.currentTitle!
+//        if hardness == "Soft" {
+//            print(eggTimes["Soft"]!)
+//        }
+//        else if hardness == "Medium" {
+//            print(eggTimes["Medium"]!)
+//        }
+//        else{
+//            print(eggTimes["Hard"]!)
+//        }
+        let result = eggTimes[hardness]!
+        print(result)
     }
 }
