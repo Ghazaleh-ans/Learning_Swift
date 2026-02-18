@@ -8,15 +8,15 @@
 
 import UIKit
 
-extension UIButton {
-  func shortChangeTo(_ color:UIColor) {
-    let prev = self.backgroundColor
-    self.backgroundColor = color
-    DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-       self.backgroundColor = prev
-    }
-  }
-}
+//extension UIButton {
+//  func shortChangeTo(_ color:UIColor) {
+//    let prev = self.backgroundColor
+//    self.backgroundColor = color
+//    DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+//       self.backgroundColor = prev
+//    }
+//  }
+//}
 
 
 class ViewController: UIViewController {
@@ -49,9 +49,11 @@ class ViewController: UIViewController {
         let correctAnswer = quiz[questionNumber].answer
 
         if userAnswer == correctAnswer {
-            sender.shortChangeTo(.green)
+//            sender.shortChangeTo(.green)
+            sender.backgroundColor = UIColor.green
         } else {
-            sender.shortChangeTo(.red)
+//            sender.shortChangeTo(.red)
+            sender.backgroundColor = UIColor.red
         }
         if questionNumber == quiz.count - 1 {
             questionNumber = 0
@@ -59,7 +61,8 @@ class ViewController: UIViewController {
         else{
             questionNumber += 1
         }
-        updateUI()
+        
+        timer = Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
     }
     
     override func viewDidLoad() {
@@ -69,8 +72,8 @@ class ViewController: UIViewController {
     
     @objc func updateUI(){
         questionLabel.text = quiz[questionNumber].text
-//        trueButton.backgroundColor = UIColor.clear
-//        falseButton.backgroundColor = UIColor.clear
+        trueButton.backgroundColor = UIColor.clear
+        falseButton.backgroundColor = UIColor.clear
     }
     
 
