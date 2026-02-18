@@ -20,7 +20,21 @@ class ViewController: UIViewController {
     var questionNumber: Int = 0
     
     @IBAction func answerButtonPressed(_ sender: UIButton) {
-        questionNumber += 1
+        
+        let userAnswer = sender.currentTitle! //True or false
+        let correctAnswer = quiz[questionNumber][1]
+        
+        if userAnswer == correctAnswer {
+            print("Correct!")
+        } else {
+            print("Wrong!")
+        }
+        if questionNumber == quiz.count - 1 {
+            questionNumber = 0
+        }
+        else{
+            questionNumber += 1
+        }
         updateUI()
     }
     
