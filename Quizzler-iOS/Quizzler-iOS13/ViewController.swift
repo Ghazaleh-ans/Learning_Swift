@@ -16,13 +16,22 @@ class ViewController: UIViewController {
     @IBOutlet weak var falseButton: UIButton!
     
     let quiz = ["Four + Two is equal to Six.", "Bananas are green.", "The capital of France is Paris.", "Water boils at 100°C."]
+    
+    var questionNumber: Int = 0
+    
     @IBAction func answerButtonPressed(_ sender: UIButton) {
+        questionNumber += 1
+        updateUI()
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        questionLabel.text = quiz[0]
+        updateUI()
     }
-
+    
+    func updateUI(){
+        questionLabel.text = quiz[questionNumber]
+    }
 
 }
 
