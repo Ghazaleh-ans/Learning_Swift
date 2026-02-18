@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var trueButton: UIButton!
     @IBOutlet weak var falseButton: UIButton!
     
-    let quiz = ["Four + Two is equal to Six.", "Bananas are green.", "The capital of France is Paris.", "Water boils at 100°C."]
+    let quiz = [["Four + Two is equal to Six.", "True"], ["Bananas are green.", "False"], ["The capital of France is Paris.", "True"], ["Water boils at 100°C.", "True"]]
     
     var questionNumber: Int = 0
     
@@ -30,7 +30,7 @@ class ViewController: UIViewController {
     }
     
     func updateUI(){
-        questionLabel.text = quiz[questionNumber]
+        questionLabel.text = quiz[questionNumber][0]
     }
 
 }
