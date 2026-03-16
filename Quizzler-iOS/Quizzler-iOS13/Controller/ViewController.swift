@@ -41,12 +41,9 @@ class ViewController: UIViewController {
 //            sender.shortChangeTo(.red)
             sender.backgroundColor = UIColor.red
         }
-        if questionNumber == quiz.count - 1 {
-            questionNumber = 0
-        }
-        else{
-            questionNumber += 1
-        }
+        
+        quizBrain.nextQuestion()
+
         timer = Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
     }
     
