@@ -19,11 +19,20 @@ class ViewController: UIViewController {
                             Story(title: "You find a treasure chest.", choice1: "Open it.", choice2: "Check for traps.")
     ]
     
+    var storyNumber: Int = 0
+    
     @IBAction func choiceMade(_ sender: UIButton) {
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        updateView()
+    }
+    
+    func updateView(){
+        storyLabel.text = stories[storyNumber].title
+        choice1Button.setTitle(stories[storyNumber].choice1, for: .normal)
+        choice2Button.setTitle(stories[storyNumber].choice2, for: .normal)
     }
 
 
