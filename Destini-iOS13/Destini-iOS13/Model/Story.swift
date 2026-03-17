@@ -11,5 +11,7 @@ import Foundation
 struct Story {
     let title: String
     let choice1: String
+    let choic1Destination: Int
     let choice2: String
+    let choic2Destination: Int
 }
