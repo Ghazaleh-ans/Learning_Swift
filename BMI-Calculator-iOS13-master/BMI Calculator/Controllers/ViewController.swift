@@ -14,13 +14,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var heightValue: UILabel!
     @IBOutlet weak var weightValue: UILabel!
     @IBAction func heightSliderChanged(_ sender: UISlider) {
-        let height = ((sender.value) * 100).rounded() / 100
+        let height = String(format: "%.2f", sender.value)
         heightValue.text = "\(height)m"
         print(height)
     }
     
     @IBAction func weightSliderChanged(_ sender: UISlider) {
-        let weight = ((sender.value) * 100).rounded() / 100
+        let weight = Int(sender.value)
         weightValue.text = "\(weight)Kg"
         print(weight)
     }
