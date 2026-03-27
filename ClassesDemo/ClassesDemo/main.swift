@@ -1,4 +1,6 @@
-
+//class pass reference but struct pass a copy
+//struct: immutable, passed by value
+//class: passed by reference, inheritance
 var skeleton = Enemy(health: 100, attackStrength: 10)
 var skeleton2 = skeleton //with struct it's a new one
 
