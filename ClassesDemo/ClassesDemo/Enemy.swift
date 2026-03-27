@@ -1,5 +1,5 @@
 
-class Enemy {
+struct Enemy {
     var health: Int
     var attackStrength: Int
     
@@ -8,7 +8,7 @@ class Enemy {
         self.attackStrength = attackStrength
     }
     
-    func takeDamage(amount: Int) {
+    mutating func takeDamage(amount: Int) {
         health = health - amount
     }
     

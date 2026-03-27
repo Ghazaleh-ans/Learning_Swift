@@ -1,7 +1,8 @@
 
-let skeleton = Enemy(health: 100, attackStrength: 10)
-let skeleton2 = skeleton //another reference to the same object
+var skeleton = Enemy(health: 100, attackStrength: 10)
+var skeleton2 = skeleton //with struct it's a new one
 
 skeleton.takeDamage(amount: 10)
 
+print(skeleton.health)
 print(skeleton2.health)
