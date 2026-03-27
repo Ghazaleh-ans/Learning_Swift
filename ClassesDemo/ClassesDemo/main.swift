@@ -4,7 +4,7 @@ print(skeleton.health)
 skeleton.move()
 skeleton.attack()
 
-
-let skeleton2 = Enemy()
-
-let skeleton3 = Enemy()
+let dragon = Dragon()
+print(dragon.health)
+dragon.move()
+dragon.attack()
