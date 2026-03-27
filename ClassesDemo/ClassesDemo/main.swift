@@ -1,13 +1,7 @@
 
-let skeleton = Enemy()
-print(skeleton.health)
-skeleton.move()
-skeleton.attack()
+let skeleton = Enemy(health: 100, attackStrength: 10)
+let skeleton2 = skeleton //another reference to the same object
 
-let dragon = Dragon()
-dragon.wingSpan = 5
-dragon.attackStrength = 20
-dragon.talk("Roar!")
-print(dragon.health)
-dragon.move()
-dragon.attack()
+skeleton.takeDamage(amount: 10)
+
+print(skeleton2.health)
