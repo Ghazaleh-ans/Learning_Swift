@@ -30,9 +30,12 @@ class ViewController: UIViewController {
     @IBAction func calculatePressed(_ sender: UIButton) {
         let height = heightSlider.value
         let weight = weightSlider.value
+        
         let bmi = (weight / pow(height, 2))
         print(bmi)
         
+        let secondVC = SecondViewController()
+        self.present(secondVC, animated: true, completion: nil)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
