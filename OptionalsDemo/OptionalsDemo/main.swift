@@ -30,7 +30,9 @@
 //print(text)
 
 //optional struct
-
+//5.Optional Chaining -> if it's not nil then proceed
+//optional?.property
+//optional?.method()
 struct MyOptional {
     var property = 123
     func method() {
@@ -43,4 +45,5 @@ let myOptional: MyOptional?
 myOptional = MyOptional()
 
 //if nil it's dangerous
-print(myOptional!.property)
+//print(myOptional!.property)
+print(myOptional?.property)
