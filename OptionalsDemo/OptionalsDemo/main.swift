@@ -1,7 +1,7 @@
 
-let myOptional: String?
-
-myOptional = nil
+//let myOptional: String?
+//
+//myOptional = nil
 
 //1.Force Unwarping the optional -> least safe way
 // if myOptioanal be nil we will have runtime error
@@ -26,5 +26,21 @@ myOptional = nil
 //two question marks next to each other that checks if the optional is nil use
 //the default value if it's not use the value
 //optional ?? defaultValue
-let text: String = myOptional ?? "No Value"
-print(text)
+//let text: String = myOptional ?? "No Value"
+//print(text)
+
+//optional struct
+
+struct MyOptional {
+    var property = 123
+    func method() {
+        print("I am the struct's method.")
+    }
+}
+
+let myOptional: MyOptional?
+
+myOptional = MyOptional()
+
+//if nil it's dangerous
+print(myOptional!.property)
