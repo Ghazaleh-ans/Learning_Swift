@@ -1,7 +1,7 @@
 
 let myOptional: String?
 
-myOptional = "Angela"
+myOptional = nil
 
 //1.Force Unwarping the optional -> least safe way
 // if myOptioanal be nil we will have runtime error
@@ -15,9 +15,16 @@ myOptional = "Angela"
 //}
 
 //3.Optional Binding :instead of checking if it's not nil
-if let safeOptional = myOptional {
-    let text: String = safeOptional
-    print(safeOptional)
-} else {
-    print("myOptional was found to be nil.")
-}
+//if let safeOptional = myOptional {
+//    let text: String = safeOptional
+//    print(safeOptional)
+//} else {
+//    print("myOptional was found to be nil.")
+//}
+
+//4.Nil Coalescing Operator
+//two question marks next to each other that checks if the optional is nil use
+//the default value if it's not use the value
+//optional ?? defaultValue
+let text: String = myOptional ?? "No Value"
+print(text)
