@@ -1,6 +1,10 @@
 struct TipBrain {
     var selectedTip: String = ""
     
+    var people: Int = 2
+    
+    var billAmount: Float = 0.0
+    
     func getTipValue() -> Double {
         switch selectedTip {
         case "0":
@@ -11,4 +15,15 @@ struct TipBrain {
             return 0.10
         }
     }
+    
+    func calculateTip() -> Float {
+        let tipValue = getTipValue()
+        return (billAmount * Float(tipValue))
+    }
+    
+    func calculateEachPersonShare() -> Float {
+        let tipAmount = calculateTip()
+        return (billAmount + tipAmount) / Float(people)
+    }
+    
 }

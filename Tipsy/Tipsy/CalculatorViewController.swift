@@ -20,16 +20,25 @@ class CalculatorViewController: UIViewController {
     @IBOutlet weak var splitNumberLabel: UILabel!
     
     @IBAction func tipChanged(_ sender: UIButton) {
+        billTextField.endEditing(true)
+        tipBrain.billAmount = Float(billTextField.text!) ?? 0.0
         for button in answerButtons {
             button.isSelected = (button == sender)
         }
         tipBrain.selectedTip = (String(sender.currentTitle!.split(separator: "%")[0]))
     }
     @IBAction func stepperValueChanged(_ sender: UIStepper) {
+        let value = Int(sender.value)
+        tipBrain.people = value
+        splitNumberLabel.text = "\(value)"
     }
     
     @IBAction func calculatePressed(_ sender: UIButton) {
         print(tipBrain.getTipValue())
+        print(tipBrain.billAmount)
+        let eachShouldPay = tipBrain.calculateEachPersonShare()
+        print(eachShouldPay)
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
