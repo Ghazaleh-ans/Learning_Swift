@@ -139,6 +139,7 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="calculatePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fOK-RC-528"/>
+                                            <segue destination="Dnf-m2-FPm" kind="show" identifier="goToResult" id="No0-0i-xY1"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -184,23 +185,23 @@
             <objects>
                 <viewController id="Dnf-m2-FPm" customClass="ResultsViewController" customModule="Tipsy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E4v-0r-cyo">
-                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tgf-9Q-e6d">
-                                <rect key="frame" x="0.0" y="0.0" width="402" height="806"/>
+                                <rect key="frame" x="0.0" y="0.0" width="402" height="812"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1aU-5P-VMi">
-                                        <rect key="frame" x="0.0" y="0.0" width="402" height="300"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="402" height="306"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="56.32" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cw2-SX-JMK">
-                                                <rect key="frame" x="138.66666666666666" y="168" width="124.99999999999997" height="100"/>
+                                                <rect key="frame" x="138.66666666666666" y="171" width="124.99999999999997" height="103"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="45"/>
                                                 <color key="textColor" red="0.0" green="0.69019607839999997" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total per person" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xfb-0w-mI8">
-                                                <rect key="frame" x="98" y="132" width="206" height="36"/>
+                                                <rect key="frame" x="98" y="135" width="206" height="36"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <color key="textColor" red="0.58431372550000005" green="0.60392156860000001" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -216,13 +217,13 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Split between 2 people, with 10% tip." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y5n-yI-QwU">
-                                        <rect key="frame" x="24" y="496" width="354" height="60"/>
+                                        <rect key="frame" x="24" y="502" width="354" height="60"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <color key="textColor" red="0.58431372550000005" green="0.60392156860000001" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzV-gt-7rc">
-                                        <rect key="frame" x="101" y="752" width="200" height="54"/>
+                                        <rect key="frame" x="101" y="758" width="200" height="54"/>
                                         <color key="backgroundColor" red="0.0" green="0.69019607839999997" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="PAX-1W-o2O"/>
@@ -259,6 +260,7 @@
                             <constraint firstItem="SFV-my-Ds8" firstAttribute="bottom" secondItem="tgf-9Q-e6d" secondAttribute="bottom" id="kgC-Nj-kZr"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="jjV-n4-TbR"/>
                     <connections>
                         <outlet property="settingsLabel" destination="y5n-yI-QwU" id="YJ5-kz-IEZ"/>
                         <outlet property="totalLabel" destination="cw2-SX-JMK" id="VZy-sQ-mMI"/>

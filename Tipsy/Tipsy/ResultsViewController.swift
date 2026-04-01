@@ -9,15 +9,20 @@
 import UIKit
 
 class ResultsViewController: UIViewController {
+    var share: Float = 0.0
+    var people: Int = 0
+    var tipPercent: Int = 10
+    
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var settingsLabel: UILabel!
     @IBAction func recalculatePressed(_ sender: UIButton) {
+        self.dismiss(animated: true)
     }
     
     override func viewDidLoad() {
+        totalLabel.text = String(format: "$%.2f", share)
+        settingsLabel.text = "Splite between \(people) people with \(tipPercent)% tip."
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
 

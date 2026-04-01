@@ -3,7 +3,7 @@ struct TipBrain {
     
     var people: Int = 2
     
-    var billAmount: Float = 0.0
+    var billAmount: Float = 123.56
     
     func getTipValue() -> Double {
         switch selectedTip {
