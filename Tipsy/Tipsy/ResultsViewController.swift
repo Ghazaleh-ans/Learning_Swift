@@ -9,7 +9,11 @@
 import UIKit
 
 class ResultsViewController: UIViewController {
-
+    @IBOutlet weak var totalLabel: UILabel!
+    @IBOutlet weak var settingsLabel: UILabel!
+    @IBAction func recalculatePressed(_ sender: UIButton) {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

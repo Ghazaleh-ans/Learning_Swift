@@ -170,6 +170,9 @@
                         <outlet property="tenPctButton" destination="Rwu-A9-VfH" id="Fz4-Mn-w6U"/>
                         <outlet property="twenyPctButton" destination="CKa-YD-tVk" id="idL-rS-WIK"/>
                         <outlet property="zeroPctButton" destination="NIj-D2-Uq5" id="0aV-W7-mWw"/>
+                        <outletCollection property="answerButtons" destination="NIj-D2-Uq5" collectionClass="NSMutableArray" id="Zsp-S6-phC"/>
+                        <outletCollection property="answerButtons" destination="Rwu-A9-VfH" collectionClass="NSMutableArray" id="MN4-ao-6oZ"/>
+                        <outletCollection property="answerButtons" destination="CKa-YD-tVk" collectionClass="NSMutableArray" id="9wS-Ze-Uef"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -231,6 +234,9 @@
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10f"/>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="recalculatePressed:" destination="Dnf-m2-FPm" eventType="touchUpInside" id="Ivk-SV-VZT"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -253,6 +259,10 @@
                             <constraint firstItem="SFV-my-Ds8" firstAttribute="bottom" secondItem="tgf-9Q-e6d" secondAttribute="bottom" id="kgC-Nj-kZr"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="settingsLabel" destination="y5n-yI-QwU" id="YJ5-kz-IEZ"/>
+                        <outlet property="totalLabel" destination="cw2-SX-JMK" id="VZy-sQ-mMI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uLi-Eb-NGd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
