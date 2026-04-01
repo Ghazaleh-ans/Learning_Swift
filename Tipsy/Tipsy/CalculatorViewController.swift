@@ -48,8 +48,18 @@ class CalculatorViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(donePressed))
+        toolbar.items = [doneButton]
+        
+        billTextField.inputAccessoryView = toolbar
+    }
 
-        // Do any additional setup after loading the view.
+    @objc func donePressed() {
+        billTextField.resignFirstResponder()
     }
 }
 
